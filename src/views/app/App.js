@@ -1,6 +1,23 @@
 import React from 'react'
-// import * as BooksAPI from './BooksAPI'
 import './App.css'
+
+import * as BooksAPI from '../../services/BooksAPI';
+import Home from '../home/Home'
+
+class App extends React.Component{
+
+  state = {
+    books: [],
+    query: ''
+    
+  }
+
+  async componentDidMount(){
+    const books = await BooksAPI.getAll();
+    this.setState({ books });
+  }
+  
+}
 
 class BooksApp extends React.Component {
   state = {
@@ -14,7 +31,7 @@ class BooksApp extends React.Component {
   }
 
   render() {
-    
+    const { books, query, searchResults, isLoadingSearch } = this.state
     return (
       <div className="app">
         {this.state.showSearchPage ? (

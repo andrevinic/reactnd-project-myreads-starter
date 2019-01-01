@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom'
 import Shelf from '../shelf/shelf'
-import * as BooksAPI from '../../BooksAPI'
+import * as BooksAPI from '../../api/BooksAPI'
 
 export default class BookShelfer extends Component{
 
@@ -64,5 +64,4 @@ export default class BookShelfer extends Component{
         </div>
       )
     }
-
 }

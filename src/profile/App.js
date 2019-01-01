@@ -2,7 +2,7 @@ import React from 'react'
 import './App.css'
 import { Route } from 'react-router-dom'
 
-import BookShelfer from './components/bookshelf/BookShelfer'
+import BookShelfer from '../components/bookshelf/BookShelfer'
 
 class BooksApp extends React.Component {
 
